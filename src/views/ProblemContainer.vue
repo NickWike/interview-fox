@@ -6,8 +6,8 @@
             <ProblemDisplayView @problem-selected="updateSelectedProblem" />
         </div>
         <div id="plane-2">
-            <h2>Selected Problem</h2>
-            <p>{{ selectedProblemName }}</p>
+            <h3>Selected {{ selectedProblemName }}</h3>
+            <!-- <p>{{ selectedProblemName }}</p> -->
             <ProblemEditView />
         </div>
       </div>
@@ -48,7 +48,7 @@ export default {
   mounted() {
     Split(['#plane-1', '#plane-2'], {
       sizes: [50, 50],
-      minSize: 200,
+      minSize: [200, 300],
       gutterSize: 10,
       cursor: 'col-resize',
       // gutter: (index, direction) => {
@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .problem-container {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
   background-color: #ffffff;
   margin: 5px;
   border-radius: 5px;

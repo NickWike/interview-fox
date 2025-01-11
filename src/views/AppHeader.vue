@@ -5,7 +5,9 @@
     </div>
     <nav>
         <ul>
-            <li><router-link to="/problem">问题</router-link></li>
+            <li><router-link to="/problem">题目</router-link></li>
+            <li><router-link to="/problem">监考</router-link></li>
+            <li><router-link to="/problem">主题</router-link></li>
         </ul>
     </nav>
     <div class="user-info">
@@ -26,7 +28,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #ffffff; /* Header background color */
 
 }
