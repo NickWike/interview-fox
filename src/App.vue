@@ -1,14 +1,17 @@
 <template>
   <AppHeader />
   <RouterView class="main-container">  </RouterView>
+  <FloatingButton />
 </template>
 
 <script>
 import AppHeader from '@/views/AppHeader.vue'
+import FloatingButton from '@/components/FloatingButton.vue'
 export default {
   name: 'App',
   components: {
-    AppHeader
+    AppHeader,
+    FloatingButton
   }
 }
 </script>
