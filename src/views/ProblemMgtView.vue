@@ -289,6 +289,25 @@ export default {
     gap: 4px;
 }
 
+.action-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.action-btn.edit {
+  background-color: #42b983;
+  color: white;
+}
+
+.action-btn.delete {
+  background-color: #f56c6c;
+  color: white;
+}
+
 .difficulty.简单 { background-color: #67C23A; color: white; }
 .difficulty.中等 { background-color: #E6A23C; color: white; }
 .difficulty.困难 { background-color: #F56C6C; color: white; }
