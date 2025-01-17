@@ -16,7 +16,7 @@
       <div v-if="filteredProblems.length > 0">
         <div v-for="problem in filteredProblems" :key="problem.id">
           <h2>{{ problem.name }} Content</h2>
-          <div v-html="renderMarkdown(markdownData[problem.id] || '')"></div>
+          <MarkdownText :content="markdownData[problem.id] || ''"></MarkdownText>
         </div>
       </div>
       <div v-else>
@@ -27,11 +27,14 @@
 </template>
 
 <script>
-import MarkdownIt from 'markdown-it';
+import MarkdownText from '@/components/MarkdownText.vue';
 // import { defineEmits } from 'vue';
 
 export default {
   name: 'ProblemDisplayView',
+  components: {
+    MarkdownText
+  },
   emits: ['problem-selected'], // 声明事件
   data() {
     return {
@@ -51,10 +54,6 @@ export default {
     },
     emitSelectedProblem(name) {
       this.$emit('problem-selected', name); // 发出事件，传递选中的问题名称
-    },
-    renderMarkdown(markdown) {
-      const md = new MarkdownIt();
-      return md.render(markdown);
     },
     fetchProblems() {
       // Mock 数据

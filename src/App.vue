@@ -1,7 +1,9 @@
 <template>
-  <AppHeader />
-  <RouterView class="main-container">  </RouterView>
-  <FloatingButton />
+  <div class="app-container">
+    <AppHeader class="app-header"/>
+    <RouterView class="body-container"/>
+    <FloatingButton class="app-footer"/>
+  </div>
 </template>
 
 <script>
@@ -17,8 +19,35 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 #app {
-  background-color: #f0f0f0; /* 设置淡灰色背景 */
-  min-height: calc(100vh - 40px); /* 确保背景覆盖整个视口 */
+  height: 100%;
+  background-color: #e4e7ed;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-header {
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.body-container {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+.app-footer {
+  flex-shrink: 0;
 }
 </style>

@@ -4,10 +4,11 @@
         <img src="@/assets/logo.png" alt="Logo" class="logo" />
     </div>
     <nav>
-        <ul>
+        <ul class="h-text-list">
             <li><router-link to="/problem">题目</router-link></li>
-            <li><router-link to="/problem">监考</router-link></li>
-            <li><router-link to="/problem">主题</router-link></li>
+            <li><router-link to="/meeting">会议</router-link></li>
+            <li><router-link to="/problemMgt">题目管理</router-link></li>
+            <li><router-link to="/userMgt">用户管理</router-link></li>
         </ul>
     </nav>
     <div class="user-info">
@@ -32,6 +33,11 @@ export default {
   padding-right: 10px;
   background-color: #ffffff; /* Header background color */
 
+}
+
+.h-text-list li{
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .logo {

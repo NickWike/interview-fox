@@ -254,7 +254,7 @@ export default {
   position: fixed;
   width: 40px;
   height: 40px;
-  background-color: #0064c8;
+  background-color: #42b983;
   color: white;
   border-radius: 50%;
   display: flex;
