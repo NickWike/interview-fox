@@ -201,8 +201,17 @@ export default {
 }
 
 .editor-op-btn {
-  padding: 10px;
+  padding: 8px 20px;
   margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #42b983;
+  color: white;
+}
+.editor-op-btn:hover {
+  background-color: #3aa876;
 }
 
 select {

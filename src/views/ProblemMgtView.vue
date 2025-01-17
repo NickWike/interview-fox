@@ -18,10 +18,14 @@
               <span class="difficulty" :class="problem.difficulty">
                 {{ problem.difficulty }}
               </span>
-              <div class="tags">
+              <div class="card-tags">
                 <span v-for="tag in problem.tags" 
                       :key="tag" 
                       class="tag">{{ tag }}</span>
+              </div>
+              <div class="action-buttons">
+                <button class="action-btn edit" >编辑</button>
+                <button class="action-btn delete" >删除</button>
               </div>
             </div>
           </div>
@@ -273,6 +277,16 @@ export default {
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 12px;
+  flex-shrink: 0;
+}
+.card-tags {
+    flex: 1;
+}
+.action-buttons {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .difficulty.简单 { background-color: #67C23A; color: white; }
